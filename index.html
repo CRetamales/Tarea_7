@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--AXIOS-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Icono -->
@@ -20,11 +22,171 @@
             <ul id = "cards" class = "cards">
                 <li class = "cards__item">
                     <div class = "card">
-                        <img src="./assets/img/1.jpeg" alt="Rick Sanchez" class = "card__img">
-                        <h2 class = "card__title">Rick Sanchez</h2>
-                        <h3 class = "card__subtitle">Human</h3>
+                        <div class = "card__content">
+                            <!-- Tiene imagen,nombre especie-->
+                            <img class = "texture-picture" src = "./assets/img/texture_img.png" alt = "texture">
+                            <img class = "picture" src = "./assets/img/1.jpeg" alt = "">
+                            <div class = "name-background"></div>
+                            <h2 class = "name">Rick Sanchez</h2>
+                            <div class = "species-background"></div>   
+                            <p class = "species">Humano</p>   
+                        </div>
                     </div>
                 </li>
+
+                <!--- TESTEO -->
+                <!--2-->
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <!-- Tiene imagen,nombre especie-->
+                            <img class = "texture-picture" src = "./assets/img/texture_img.png" alt = "texture">
+                            <img class = "picture" src = "./assets/img/1.jpeg" alt = "">
+                            <div class = "name-background"></div>
+                            <h2 class = "name">Rick Sanchez</h2>
+                            <div class = "species-background"></div>   
+                            <p class = "species">Humano</p>   
+                        </div>
+                    </div>
+                </li>
+                <!--3-->
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <!-- Tiene imagen,nombre especie-->
+                            <img class = "texture-picture" src = "./assets/img/texture_img.png" alt = "texture">
+                            <img class = "picture" src = "./assets/img/1.jpeg" alt = "">
+                            <div class = "name-background"></div>
+                            <h2 class = "name">Rick Sanchez</h2>
+                            <div class = "species-background"></div>   
+                            <p class = "species">Humano</p>   
+                        </div>
+                    </div>
+                </li>
+                <!--4-->
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <!-- Tiene imagen,nombre especie-->
+                            <img class = "texture-picture" src = "./assets/img/texture_img.png" alt = "texture">
+                            <img class = "picture" src = "./assets/img/1.jpeg" alt = "">
+                            <div class = "name-background"></div>
+                            <h2 class = "name">Rick Sanchez</h2>
+                            <div class = "species-background"></div>   
+                            <p class = "species">Humano</p>   
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <!-- Tiene imagen,nombre especie-->
+                            <img class = "texture-picture" src = "./assets/img/texture_img.png" alt = "texture">
+                            <img class = "picture" src = "./assets/img/1.jpeg" alt = "">
+                            <div class = "name-background"></div>
+                            <h2 class = "name">Rick Sanchez</h2>
+                            <div class = "species-background"></div>   
+                            <p class = "species">Humano</p>   
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <!-- Tiene imagen,nombre especie-->
+                            <img class = "texture-picture" src = "./assets/img/texture_img.png" alt = "texture">
+                            <img class = "picture" src = "./assets/img/1.jpeg" alt = "">
+                            <div class = "name-background"></div>
+                            <h2 class = "name">Rick Sanchez</h2>
+                            <div class = "species-background"></div>   
+                            <p class = "species">Humano</p>   
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <!-- Tiene imagen,nombre especie-->
+                            <img class = "texture-picture" src = "./assets/img/texture_img.png" alt = "texture">
+                            <img class = "picture" src = "./assets/img/1.jpeg" alt = "">
+                            <div class = "name-background"></div>
+                            <h2 class = "name">Rick Sanchez</h2>
+                            <div class = "species-background"></div>   
+                            <p class = "species">Humanoaaaa</p>   
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <!-- Tiene imagen,nombre especie-->
+                            <img class = "texture-picture" src = "./assets/img/texture_img.png" alt = "texture">
+                            <img class = "picture" src = "./assets/img/1.jpeg" alt = "">
+                            <div class = "name-background"></div>
+                            <h2 class = "name">Rick Sanchez</h2>
+                            <div class = "species-background"></div>   
+                            <p class = "species">Humano</p>   
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <!-- Tiene imagen,nombre especie-->
+                            <img class = "texture-picture" src = "./assets/img/texture_img.png" alt = "texture">
+                            <img class = "picture" src = "./assets/img/1.jpeg" alt = "">
+                            <div class = "name-background"></div>
+                            <h2 class = "name">Rick Sanchez</h2>
+                            <div class = "species-background"></div>   
+                            <p class = "species">Humano</p>   
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <!-- Tiene imagen,nombre especie-->
+                            <img class = "texture-picture" src = "./assets/img/texture_img.png" alt = "texture">
+                            <img class = "picture" src = "./assets/img/1.jpeg" alt = "">
+                            <div class = "name-background"></div>
+                            <h2 class = "name">Rick Sanchez</h2>
+                            <div class = "species-background"></div>   
+                            <p class = "species">Humano</p>   
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <!-- Tiene imagen,nombre especie-->
+                            <img class = "texture-picture" src = "./assets/img/texture_img.png" alt = "texture">
+                            <img class = "picture" src = "./assets/img/1.jpeg" alt = "">
+                            <div class = "name-background"></div>
+                            <h2 class = "name">Rick Sanchez</h2>
+                            <div class = "species-background"></div>   
+                            <p class = "species">Humano</p>   
+                        </div>
+                    </div>
+                </li>
+                <li class = "cards__item">
+                    <div class = "card">
+                        <div class = "card__content">
+                            <!-- Tiene imagen,nombre especie-->
+                            <img class = "texture-picture" src = "./assets/img/texture_img.png" alt = "texture">
+                            <img class = "picture" src = "./assets/img/1.jpeg" alt = "">
+                            <div class = "name-background"></div>
+                            <h2 class = "name">Rick Sanchez</h2>
+                            <div class = "species-background"></div>   
+                            <p class = "species">Humano</p>   
+                        </div>
+                    </div>
+                </li>
+
+                
+                
+    
+
+                <!------------->
             </ul>
         </div> 
         <div class = "tarea-container__footer">

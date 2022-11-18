@@ -6,4 +6,145 @@
   text-decoration: none;
 }
 
+.tarea-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 12fr 0.2fr;
+  background-color: #f0e14a;
+}
+.tarea-container__header, .tarea-container__footer {
+  background: #1D1E2C;
+  align-items: center;
+  justify-content: center;
+  color: #35c9dd;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.tarea-container__header {
+  grid-row: 1/1;
+  display: flex;
+}
+.tarea-container__header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  -webkit-text-stroke: 1px #95ff02;
+}
+@media screen and (max-width: 630px) {
+  .tarea-container__header h1 {
+    font-size: 1.2rem;
+    -webkit-text-stroke: 0.5px #95ff00;
+  }
+}
+@media screen and (max-width: 400px) {
+  .tarea-container__header h1 {
+    font-size: 1rem;
+    -webkit-text-stroke: 0.5px #95ff00;
+  }
+}
+.tarea-container__main {
+  grid-row: 2/2;
+  display: flex;
+  justify-content: center;
+}
+.tarea-container__footer {
+  grid-row: 3/3;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+}
+.tarea-container__footer h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  -webkit-text-stroke: 0.5px #95ff02;
+}
+@media screen and (max-width: 630px) {
+  .tarea-container__footer h2 {
+    font-size: 0.7rem;
+    -webkit-text-stroke: 0.3px #95ff02;
+  }
+}
+@media screen and (max-width: 400px) {
+  .tarea-container__footer h2 {
+    font-size: 0.6rem;
+    -webkit-text-stroke: 0.2px #95ff02;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  list-style: none;
+  justify-content: center;
+}
+.cards__item {
+  margin: 0.5rem;
+  width: 11rem;
+  height: 15rem;
+  background-color: #1D1E2C;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.cards__item .card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cards__item .card__content .picture, .cards__item .card__content .texture-picture {
+  position: relative;
+  width: 10rem;
+  height: 14rem;
+  clip-path: polygon(10% 0, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
+}
+.cards__item .card__content .picture {
+  opacity: 0.6;
+}
+.cards__item .card__content .texture-picture {
+  position: absolute;
+  background-color: #1fbcff;
+}
+.cards__item .card__content .name, .cards__item .card__content .name-background, .cards__item .card__content .species, .cards__item .card__content .species-background {
+  position: absolute;
+}
+.cards__item .card__content .name-background, .cards__item .card__content .species-background {
+  opacity: 0.75;
+  background: #00556a;
+}
+.cards__item .card__content .name, .cards__item .card__content .species {
+  opacity: 0.9;
+  color: #74acbd;
+}
+.cards__item .card__content .name, .cards__item .card__content .name-background {
+  top: 17.3rem;
+}
+.cards__item .card__content .species, .cards__item .card__content .species-background {
+  top: 16rem;
+}
+.cards__item .card__content .name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.cards__item .card__content .species {
+  padding: 0.1rem 1rem;
+}
+.cards__item .card__content .name-background {
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  padding: 0.8rem 5.1rem;
+}
+.cards__item .card__content .species-background {
+  padding: 0.7rem 3rem;
+  clip-path: polygon(10% 0, 90% 0%, 100% 100%, 0 100%);
+}
+
 /*# sourceMappingURL=style.css.map */

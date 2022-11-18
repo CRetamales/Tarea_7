@@ -1,0 +1,64 @@
+.tarea-container {
+    display: grid;
+    //Sera una grilla de 1 columna y 3 filas
+    //header, cards, footer
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 12fr 0.2fr;
+    background-color: #f0e14a;
+    &__header, &__footer {
+        background: #1D1E2C;
+        align-items: center;
+        justify-content: center;
+        color: 	#35c9dd;
+        font-style: italic;
+        text-transform: uppercase;
+    }
+    &__header {
+        //esta en la primera fila
+        grid-row: 1 / 1;
+        display: flex;
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            -webkit-text-stroke: 1.0px #95ff02;
+
+            @media screen and (max-width: 630px) {
+                font-size: 1.2rem;
+                -webkit-text-stroke: 0.5px #95ff00;
+            }
+            @media screen and (max-width: 400px) {
+                font-size: 1rem;
+                -webkit-text-stroke: 0.5px #95ff00;
+            }
+        }
+    }
+    &__main{
+        //esta en la segunda fila
+        grid-row: 2 / 2;
+        display: flex;
+        justify-content: center;
+    }
+    &__footer {
+        //esta en la tercera fila
+        grid-row: 3 / 3;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            -webkit-text-stroke: 0.5px #95ff02;
+            @media screen and (max-width: 630px) {
+                font-size: 0.7rem;
+                -webkit-text-stroke: 0.3px #95ff02;
+            }
+            @media screen and (max-width: 400px) {
+                font-size: 0.6rem;
+                -webkit-text-stroke: 0.2px #95ff02;
+            }
+        }
+    }
+}
