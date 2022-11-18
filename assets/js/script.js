@@ -69,7 +69,7 @@ class Character {
 let url = "https://rickandmortyapi.com/api/character/";
 
 
-//Funcion que se encarga de realizar la peticion a la API y
+//Funcion que se encarga de realizar la peticion a la API 
 //Entrada: void
 //Salida: void
 async function getCharacters() {
@@ -92,4 +92,41 @@ async function getCharacters() {
 }
 
 //Llamada a la funcion
-getCharacters();
+//getCharacters();
+
+//Funcion que se encarga de realizar la peticion a la API
+//Entrada: cantidad de personajes a mostrar por cantidad de paginas
+//Salida: void
+async function getCharactersByQuantity(quantity) {
+    if (quantity <= 0) {
+        quantity = 1;
+    } else if (quantity > 42) {
+        quantity = 42;
+    }
+    try{
+        let response  = await axios.get(url);
+        //Si no hay problemas con la respuesta
+        //se puede efectuar la peticion
+        for (let i = 0; i < quantity; i++) {
+            //Se realiza la peticion
+            response  = await axios.get(url);
+            //Se obtiene la data
+            let data = response.data.results;
+            //Se recorre el arreglo de objetos
+            data.map((character) => {
+                //Se crea un objeto de tipo clase Character
+                let characterObj = new Character(character.name, character.species, character.image);
+                //Se inyecta el objeto en el DOM;
+                characterObj.show();
+            });
+            url = response.data.info.next;
+
+        }
+    }catch(error){
+        console.log(error);
+        alert("Error al realizar la petición");
+    }
+}
+
+//Llamada a la funcion
+getCharactersByQuantity(1);

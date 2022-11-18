@@ -3,15 +3,15 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     list-style: none;
     justify-content: center;
     &__item{
         margin: 0.5rem;
         width: 11rem;
         height: 15rem;
-        background-color: #1D1E2C;
+        background-color: #005367;
         border-radius: 10px;
         box-shadow: 0 0 10px #1c1c1c;
         display: flex;
@@ -21,6 +21,37 @@
         transition: all 0.5s ease-in-out;
         &:hover{
             transform: scale(1.1);
+            
+            
+            .card{
+                &__picture, &__texture-picture{
+                    width: 100%;
+                    height: 85%;
+                    transition: height 0.5s ease-in-out;
+                }
+                &__name-background, &__species-background{
+                    opacity: 0;
+                    
+                }
+                &__picture{
+                    opacity: 1;
+                }
+                &__name{
+                    font-size: 0.9rem;
+                    top:-1.5rem;
+                    transition: opacity 0.5s ease-in;
+                    color: #ffffff;
+                    overflow: visible;
+                    text-overflow: visible;
+                    white-space: normal;
+                }
+                &__species{
+                    //aumentar el tamaño de la letra
+                    font-size: 1rem;
+                    color: #ffffff;
+                }
+
+            }
         }
         .card{
             position: relative;
@@ -31,19 +62,22 @@
             
 
             &__picture, &__texture-picture{
-                
                 width: 10rem;
                 height: 14rem;
                 clip-path: polygon(10% 0, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
+                transition: height 0.5s ease-in-out;
+                
             }
             &__picture{
                 opacity: 0.6;
                 transition: all 0.5s ease-in-out;
+            
                 
             }
             &__texture-picture{
                 position: absolute;
-                background-color: #1fbcff;
+                background-image: radial-gradient( #b71cff, #1c1c1c);
+
             }
             &__name, &__name-background, &__species, &__species-background{
                 position: absolute; 
@@ -51,11 +85,18 @@
             &__name-background, &__species-background{
                 opacity: 0.8;
                 background: #00556a;
+                
             }
             &__name, &__species{
                 padding: 0.2rem;
                 opacity: 0.9;
                 color: #c3ebf9;
+                text-align: center;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                justify-content: center;
+                align-content: center;
                 &:hover{
                     color: #ffffff;
                 }
@@ -67,39 +108,24 @@
                 top: 11.2rem;
             }
             &__name{
-                //salga centrado
-                font-size: 0.65rem;
+                //font-size: 0.65rem;
+                font-size: 0.8rem;
                 font-weight: 700;   
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                text-align: center;
-                justify-content: center;
-                align-content: center;
+                width: 7rem;
+        
             }
             &__species{
                 font-size: 0.8rem;
+                
             }
             &__name-background{  
                 clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
                 padding: 0.8rem 5.1rem;
             }
             &__species-background{
-                padding : 0.7rem 3rem;
+                padding : 0.7rem 5rem;
+                
                 clip-path: polygon(10% 0, 90% 0%, 100% 100%, 0 100%);
-            }
-            
-           //pasar por encima de la card
-            &:hover{
-                .card__picture{
-                    opacity: 1;
-                }
-                .card__name{
-                    color: #ffffff;
-                }
-                .card__species{
-                    color: #ffffff;
-                }
             }
         }
     }
