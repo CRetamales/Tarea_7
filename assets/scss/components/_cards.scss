@@ -1,3 +1,4 @@
+
 .cards{
     display: flex;
     flex-wrap: wrap;
@@ -18,66 +19,89 @@
         justify-content: center;
         align-items: center;
         transition: all 0.5s ease-in-out;
+        &:hover{
+            transform: scale(1.1);
+        }
         .card{
-            &__content{
-                //wrap
-                display: flex;
-                flex-direction: column;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            display: flex;
+            
+
+            &__picture, &__texture-picture{
+                
+                width: 10rem;
+                height: 14rem;
+                clip-path: polygon(10% 0, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
+            }
+            &__picture{
+                opacity: 0.6;
+                transition: all 0.5s ease-in-out;
+                
+            }
+            &__texture-picture{
+                position: absolute;
+                background-color: #1fbcff;
+            }
+            &__name, &__name-background, &__species, &__species-background{
+                position: absolute; 
+            }
+            &__name-background, &__species-background{
+                opacity: 0.8;
+                background: #00556a;
+            }
+            &__name, &__species{
+                padding: 0.2rem;
+                opacity: 0.9;
+                color: #c3ebf9;
+                &:hover{
+                    color: #ffffff;
+                }
+            }
+            &__name, &__name-background{
+                top:12.5rem;
+            }
+            &__species, &__species-background{
+                top: 11.2rem;
+            }
+            &__name{
+                //salga centrado
+                font-size: 0.65rem;
+                font-weight: 700;   
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                text-align: center;
                 justify-content: center;
-                align-items: center;
-                
-
-
-
-                
-                .picture, .texture-picture {
-                    position: relative;
-                    width: 10rem;
-                    height: 14rem;
-                    clip-path: polygon(10% 0, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
+                align-content: center;
+            }
+            &__species{
+                font-size: 0.8rem;
+            }
+            &__name-background{  
+                clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+                padding: 0.8rem 5.1rem;
+            }
+            &__species-background{
+                padding : 0.7rem 3rem;
+                clip-path: polygon(10% 0, 90% 0%, 100% 100%, 0 100%);
+            }
+            
+           //pasar por encima de la card
+            &:hover{
+                .card__picture{
+                    opacity: 1;
                 }
-                .picture{
-                    opacity: 0.6;
+                .card__name{
+                    color: #ffffff;
                 }
-                .texture-picture{
-                    position: absolute;
-                    background-color: #1fbcff;
-                }
-                .name, .name-background, .species, .species-background{
-                    position: absolute; 
-                }
-                .name-background, .species-background{
-                    opacity: 0.75;
-                    background: #00556a;
-                }
-                .name, .species{
-                    opacity: 0.9;
-                    color: #74acbd;
-                }
-                .name, .name-background{
-                    top:17.3rem;
-                }
-                .species, .species-background{
-                    top: 16rem;
-                }
-                .name{
-                    font-size: 1.2rem;
-                    font-weight: 700;   
-                }
-                .species{
-                    padding : 0.1rem 1rem;
-                }
-                .name-background{  
-                    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
-                    padding: 0.8rem 5.1rem;
-                }
-                .species-background{
-                    padding : 0.7rem 3rem;
-                    clip-path: polygon(10% 0, 90% 0%, 100% 100%, 0 100%);
+                .card__species{
+                    color: #ffffff;
                 }
             }
         }
     }
-}
 
-  
+}

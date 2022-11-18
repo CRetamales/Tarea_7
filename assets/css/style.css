@@ -6,6 +6,10 @@
   text-decoration: none;
 }
 
+body {
+  background-color: #f0e14a;
+}
+
 .tarea-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -95,56 +99,79 @@
   align-items: center;
   transition: all 0.5s ease-in-out;
 }
-.cards__item .card__content {
-  display: flex;
-  flex-direction: column;
+.cards__item:hover {
+  transform: scale(1.1);
+}
+.cards__item .card {
+  position: relative;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  display: flex;
 }
-.cards__item .card__content .picture, .cards__item .card__content .texture-picture {
-  position: relative;
+.cards__item .card__picture, .cards__item .card__texture-picture {
   width: 10rem;
   height: 14rem;
   clip-path: polygon(10% 0, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
 }
-.cards__item .card__content .picture {
+.cards__item .card__picture {
   opacity: 0.6;
+  transition: all 0.5s ease-in-out;
 }
-.cards__item .card__content .texture-picture {
+.cards__item .card__texture-picture {
   position: absolute;
   background-color: #1fbcff;
 }
-.cards__item .card__content .name, .cards__item .card__content .name-background, .cards__item .card__content .species, .cards__item .card__content .species-background {
+.cards__item .card__name, .cards__item .card__name-background, .cards__item .card__species, .cards__item .card__species-background {
   position: absolute;
 }
-.cards__item .card__content .name-background, .cards__item .card__content .species-background {
-  opacity: 0.75;
+.cards__item .card__name-background, .cards__item .card__species-background {
+  opacity: 0.8;
   background: #00556a;
 }
-.cards__item .card__content .name, .cards__item .card__content .species {
+.cards__item .card__name, .cards__item .card__species {
+  padding: 0.2rem;
   opacity: 0.9;
-  color: #74acbd;
+  color: #c3ebf9;
 }
-.cards__item .card__content .name, .cards__item .card__content .name-background {
-  top: 17.3rem;
+.cards__item .card__name:hover, .cards__item .card__species:hover {
+  color: #ffffff;
 }
-.cards__item .card__content .species, .cards__item .card__content .species-background {
-  top: 16rem;
+.cards__item .card__name, .cards__item .card__name-background {
+  top: 12.5rem;
 }
-.cards__item .card__content .name {
-  font-size: 1.2rem;
+.cards__item .card__species, .cards__item .card__species-background {
+  top: 11.2rem;
+}
+.cards__item .card__name {
+  font-size: 0.65rem;
   font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
 }
-.cards__item .card__content .species {
-  padding: 0.1rem 1rem;
+.cards__item .card__species {
+  font-size: 0.8rem;
 }
-.cards__item .card__content .name-background {
+.cards__item .card__name-background {
   clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
   padding: 0.8rem 5.1rem;
 }
-.cards__item .card__content .species-background {
+.cards__item .card__species-background {
   padding: 0.7rem 3rem;
   clip-path: polygon(10% 0, 90% 0%, 100% 100%, 0 100%);
+}
+.cards__item .card:hover .card__picture {
+  opacity: 1;
+}
+.cards__item .card:hover .card__name {
+  color: #ffffff;
+}
+.cards__item .card:hover .card__species {
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
